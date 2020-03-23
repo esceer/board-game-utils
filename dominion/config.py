@@ -13,3 +13,6 @@ class Config:
 
     def get_available_cards(self) -> list:
         return self._config['Cards']['available-property-cards'].split(',')
+
+    def get_num_of_picks(self) -> int:
+        return int(self._config['Cards']['number-of-property-picks'])
