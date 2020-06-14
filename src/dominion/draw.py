@@ -1,7 +1,8 @@
-from dominion.config import Config
-from dominion.model import CardDeck
 import random
 import sys
+
+from dominion.config import Config
+from dominion.model import CardDeck
 
 
 def pick_cards(deck: CardDeck, num_of_picks: int, pre_selected_cards=None):

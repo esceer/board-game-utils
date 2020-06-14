@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ title }}</title>
+  <style type="text/css">
+  body {
+    margin: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-smoothing: antialiased;
+    background-color: #fef6e7;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-gap: 10px;
+    color: #444;
+  }
+
+  .box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 150%;
+  }
+
+  .picked {
+    color: #ff6600;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ff6600;
+  }
+
+  .btn {
+    margin-top: 40px;
+    font-size: 1.5rem;
+  }
+  </style>
+</head>
+<body>
+  <h1>{{ title }}</h1>
+  <div class="wrapper">
+    <div class="box {% if 'atepites' in picked_cards %} picked {% endif %}">Atepites</div>
+    <div class="box {% if 'banya' in picked_cards %} picked {% endif %}">Banya</div>
+    <div class="box {% if 'boszorkany' in picked_cards %} picked {% endif %}">Boszorkany</div>
+    <div class="box {% if 'falu' in picked_cards %} picked {% endif %}">Falu</div>
+    <div class="box {% if 'favago' in picked_cards %} picked {% endif %}">Favago</div>
+    <div class="box {% if 'fesztival' in picked_cards %} picked {% endif %}">Fesztival</div>
+    <div class="box {% if 'hivatalnok' in picked_cards %} picked {% endif %}">Hivatalnok</div>
+    <div class="box {% if 'kalandor' in picked_cards %} picked {% endif %}">Kalandor</div>
+    <div class="box {% if 'kancellar' in picked_cards %} picked {% endif %}">Kancellar</div>
+    <div class="box {% if 'kapolna' in picked_cards %} picked {% endif %}">Kapolna</div>
+    <div class="box {% if 'kem' in picked_cards %} picked {% endif %}">Kem</div>
+    <div class="box {% if 'kovacsmuhely' in picked_cards %} picked {% endif %}">Kovacsmuhely</div>
+    <div class="box {% if 'konyvtar' in picked_cards %} picked {% endif %}">Konyvtar</div>
+    <div class="box {% if 'laboratorium' in picked_cards %} picked {% endif %}">Laboratorium</div>
+    <div class="box {% if 'lakoma' in picked_cards %} picked {% endif %}">Lakoma</div>
+    <div class="box {% if 'muhely' in picked_cards %} picked {% endif %}">Muhely</div>
+    <div class="box {% if 'piac' in picked_cards %} picked {% endif %}">Piac</div>
+    <div class="box {% if 'pince' in picked_cards %} picked {% endif %}">Pince</div>
+    <div class="box {% if 'polgarorseg' in picked_cards %} picked {% endif %}">Polgarorseg</div>
+    <div class="box {% if 'tanacsterem' in picked_cards %} picked {% endif %}">Tanacsterem</div>
+    <div class="box {% if 'tolvaj' in picked_cards %} picked {% endif %}">Tolvaj</div>
+    <div class="box {% if 'tronterem' in picked_cards %} picked {% endif %}">Tronterem</div>
+    <div class="box {% if 'uzsoras' in picked_cards %} picked {% endif %}">Uzsoras</div>
+    <div class="box {% if 'vararok' in picked_cards %} picked {% endif %}">Vararok</div>
+  </div>
+  <form action='/' method='POST'>
+    <button class="btn">Sorsol</button>
+  </form>
+</body>
+</html>
